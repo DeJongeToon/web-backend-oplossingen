@@ -2,16 +2,12 @@
 
     session_start();
 
-   
-
     $straat       = (isset($_SESSION['straat']) ? $_SESSION['straat'] : '' );
     $nummer       = (isset($_SESSION['nummer']) ? $_SESSION['nummer'] : '' );
     $gemeente     = (isset($_SESSION['gemeente']) ? $_SESSION['gemeente'] : '' );
     $postcode     = (isset($_SESSION['postcode']) ? $_SESSION['postcode'] : '' );
 
-    
-
-    // Is de submit knop gesset
+    // Is de submit knop gesset vanuit vorige pagina
     if (isset($_POST['submit'])){
      
             $email = $_POST['email'];

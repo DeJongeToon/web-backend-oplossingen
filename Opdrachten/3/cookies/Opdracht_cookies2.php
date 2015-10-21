@@ -1,18 +1,6 @@
 <?php
 
-
-
-    //LOGOUT
-	if (isset($_GET['cookie'])) {
-	
-		if ($_GET['cookie'] == 'delete') {
-		
-			// Niet 100% veilig dus...
-			setcookie('authenticated','', time() - 360 );
-			
-			header('location: Opdracht_cookies.php');
-		}
-	}
+    
         
 ?>
 
@@ -39,9 +27,7 @@
             
         </form>
         
-        <pre><?php echo var_dump( $_POST ) ?></pre>
-        
-        <pre><?php echo var_dump( $_GET ) ?></pre>
+        <pre><?php echo var_dump( $_COOKIE ) ?></pre>
         
         
     </body>

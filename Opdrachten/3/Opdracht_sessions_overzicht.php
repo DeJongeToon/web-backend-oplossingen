@@ -42,7 +42,7 @@
             <p><a href="Opdracht_sessions_registratiegegevens.php?focus=<?= $email ?> ">wijzig</a></p>
             
             <li><?php echo "Nickname: " . $_SESSION['nickname'] ?></li>
-            <p><a href="Opdracht_sessions_registratiegegevens.php?focus=nickame ">wijzig</a></p>
+            <p><a href="Opdracht_sessions_registratiegegevens.php?focus=<?= $nickname ?> ">wijzig</a></p>
             
             
             

@@ -13,10 +13,10 @@
 	}
 
 
+    // als sessie is geSET --> sessie 'email' in $email steken
     $email      = (isset($_SESSION['email']) ? $_SESSION['email'] : '' );
-    $nickname   = (isset($_SESSION['nickname']) ? $_SESSION['nickname'] : '' )
-    
-        
+    $nickname   = (isset($_SESSION['nickname']) ? $_SESSION['nickname'] : '' );
+
 ?>
 
 <!DOCTYPE html>

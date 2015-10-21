@@ -1,21 +1,43 @@
 <?php
 
+
+    //LOGOUT
+	if (isset($_GET['cookie'])) {
+	
+		if ($_GET['cookie'] == 'delete') {
+		
+			// Niet 100% veilig dus...
+			setcookie('cookieAUT',false, time() - 360 );
+			
+			header('location: Opdracht_cookies.php');
+		}
+	}
+
+
+
+
+    //Variabele
 	$message			=	false;
 
-    //Haal de info uit tekstbestand
-        $fileContent	=	file_get_contents( 'gegevens.txt' );
 
-    //Explode = split a string by string in een array --> $userData[0] = jan en $userData[1] = paswoord01
-	    $userData		=	explode( ',', $fileContent );
+
+
+    //Haal de info uit tekstbestand
+        $Gegevens   	=	file_get_contents( 'gegevens.txt' );
+
+    //Explode = split a string by string in een array --> $dateUser[0] = jan en $dataUser[1] = paswoord01
+	    $dataUser		=	explode( ',', $Gegevens );
     
 
-    //Indien gegevens juist ingegeven, maak een cookie aan
 
+
+
+    //Indien gegevens juist ingegeven, maak een cookie aan
     if (isset( $_POST['submit'] ) ) {
         
-        if ( $_POST[ 'name' ] == $userData[0] && $_POST[ 'password' ] == $userData[1] ) {
+        if ( $_POST[ 'name' ] == $dataUser[0] && $_POST[ 'password' ] == $dataUser[1] ) {
         
-            setcookie( 'authenticated', true, time() + 360 );
+            setcookie( 'cookieAUT', true, time() + 360 );
             header( 'location: Opdracht_cookies2.php' );
         }
         else {
@@ -24,6 +46,8 @@
             
         }
     }
+
+
         
 ?>
 
@@ -44,9 +68,11 @@
     
 	    <form action="Opdracht_cookies.php" method="post">
           
-           <?php if ( $message ): ?>
-					<p><?php echo $message ?></p>
-				<?php endif ?>
+            <?php if ( $message ): ?>
+            
+				<p><?php echo $message ?></p>
+           
+            <?php endif ?>
            
             <label for="name">Gebruikersnaam</label>                    
             <input type="text" name="name" id="name" >
@@ -58,6 +84,7 @@
             
         </form>
         
+        <pre><?php echo var_dump( $_COOKIE ) ?></pre>    
         
     </body>
 </html>
