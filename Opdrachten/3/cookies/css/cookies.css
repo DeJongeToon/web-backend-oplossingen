@@ -1,0 +1,60 @@
+body {
+
+    font-family: Open Sans, sans-serif;
+
+}
+
+label, input {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    
+}
+
+form {
+    width  : 500px;
+    padding: 0px;
+    margin : 0px;
+}
+
+input[type="submit"] { margin-top: 10px; }
+
+h1 {
+
+    color: #505050;
+    padding-bottom: 5px;
+    font-weight: normal;
+    width: 415px;
+    border-bottom: 1px solid #9d9d9d;
+
+}
+
+.p2 {
+
+    width: 300px;
+    
+}
+.d2 {
+
+    width: 100px;
+    
+}
+
+.sess {
+
+    margin-left: 20px;
+
+}
+
+a {
+
+    font-size: small;
+}
+p a {
+
+   margin: 0;
+   padding: 0;
+    
+
+}
