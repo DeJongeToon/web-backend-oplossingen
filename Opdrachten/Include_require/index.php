@@ -16,24 +16,9 @@
                                                   'tag 2 van artikel 3',  
                                                   'tag 3 van artikel 3' ) ) 
                     );
+
+    include 'view\header-partial.html';
+    include 'view\body-partial.html';
+    include 'view\footer-partial.html';
+
 ?>
-
-<html>
-<head>
-	<?php include ('header-partial.html') ?>
-</head>
-
-    <body>
-          <?php if( $artikels ) : ?>
-          
-              <?php include ('body-partial.html') ?>;
-          
-          <?php endif ?>
-       
-    </body>
-    
-    <footer>
-       <?php include ('footer-partial.html') ?>
-    </footer> 
-
-</html>
